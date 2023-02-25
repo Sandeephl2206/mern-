@@ -10,7 +10,7 @@ fs.createReadStream('keplar_data.csv')
 .pipe(parse({
     comment: '#',
     columns: true,
-}))
+})) //readable.pipe(writeable)
 .on('data',(data)=>{
     if(habitalplanet(data)){
         habital.push(data);
